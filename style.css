@@ -160,5 +160,5 @@ main {
 
 #home .text p {
   margin-bottom: 2rem;
-  max-width: 100px;
+  max-width: 100%;
 }
