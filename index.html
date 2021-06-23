@@ -6,6 +6,8 @@
     <!--O viewport tem a ver com altura e largura da tela-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OriginSix</title>
+    <!--ICONES-->
+    <link rel="stylesheet" href="assets/fonts/style.css" />
     <!--STYLES-->
     <link rel="stylesheet" href="style.css" />
 
@@ -17,10 +19,20 @@
     />
   </head>
   <body>
-    <header id="header">
+    <header id="header" class="scroll">
       <nav class="container">
         <a class="logo" href="#">beauty<span>salon</span>.</a>
-        <div class="menu">...</div>
+        <div class="menu">
+          <ul class="grid show">
+            <li><a class="title" href="#home">Inicio</a></li>
+            <li><a class="title" href="#about">Sobre</a></li>
+            <li><a class="title" href="#services">Serviços</a></li>
+            <li><a class="title" href="#testimonials">Depoimentos</a></li>
+            <li><a class="title" href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <div class="icon-menu toggle"></div>
+        <div class="icon-close toggle"></div>
       </nav>
     </header>
 
@@ -29,26 +41,89 @@
         <div class="container grid">
           <div class="image">
             <img
-            src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-            alt="Cabelereira sorrindo, penteanto o cabelo de outra mulher enquanto passa o secador de cabelo"
-          />
+              src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              alt="Cabelereira sorrindo, penteanto o cabelo de outra mulher enquanto passa o secador de cabelo"
+            />
           </div>
           <div class="text">
-            <h1>Saúde natural para os seus cabelos</h1>
-          <p>
-            Um salão exclusivo em São Paulo, especializado em tratamentos
-            naturais.
-          </p>
-          <a class="button" href="#">Agendar um horário</a>
+            <h2 class="title">Saúde natural para os seus cabelos</h2>
+            <p>
+              Um salão exclusivo em São Paulo, especializado em tratamentos
+              naturais.
+            </p>
+            <a class="button" href="#">Agendar um horário</a>
           </div>
         </div>
       </section>
       <div class="divider1"></div>
-      <section class="section">
-        <div class="container">
-          Outra seção
+      <section class="section" id="about">
+        <div class="container grid">
+          <div class="image">
+            <img
+              src="https://images.unsplash.com/photo-1559599101-f09722fb4948?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              alt="Três mulheres sorrindo, segurando acessórios de cabeleireiras"
+            />
+          </div>
+          <div class="text"></div>
+          <h2 class="title">Sobre nós</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ipsum
+            iure consequuntur dolorum veritatis voluptates quas numquam
+            molestias doloremque ad eligendi cum, sit, laudantium voluptatem ab
+            deleniti quod nisi debitis!
+          </p>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+            explicabo laboriosam est eum! Architecto quod doloremque
+            perspiciatis iusto perferendis fuga velit praesentium, nobis ipsam
+            unde culpa earum ratione beatae! Natus?
+          </p>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            dignissimos, commodi sunt consectetur assumenda similique ducimus
+            nisi veritatis pariatur sapiente, ipsa recusandae inventore, fugiat
+            ex. Quia tempora cumque velit soluta!
+          </p>
+        </div>
+      </section>
+      <div class="divider2"></div>
+      <section class="section" id="services">
+        <div class="container grid">
+          <header>
+            <h2 class="title">Serviços</h2>
+            <p>
+              Com mais de 10 anos no mercado, o <strong>Beautysalon</strong> já conquistou clientes de inúmeros países com seus tratamentos exclusivos e totalmente naturais
+            </p>
+          </header>
+            <div class="cards grid">
+              <div class="card">
+                <i class="icon-woman-hair"></i>
+                <h3 class="title">Terapia capilar</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates hic, harum impedit corrupti id iusto. Vel consectetur unde odit quasi culpa explicabo nam commodi ut corporis! Magnam sit alias vitae?
+                </p>
+              </div>
+              <div class="card">
+                <i class="icon-trim"></i>
+                <h3 class="title">Cortes</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, nostrum molestias! Perferendis corporis consectetur quae, animi alias quibusdam vero sequi impedit dolores illo similique. Quod incidunt reprehenderit dicta tenetur labore.
+                </p>
+              </div>
+              <div class="card">
+                <i class="icon-cosmetic"></i>
+                <h3 class="title">Tratamentos</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum obcaecati, dolore, minus, dolorum soluta accusamus atque ducimus adipisci rem suscipit nam velit ullam fugit. Maxime hic vel id ea possimus.
+                </p>
+              </div>
+            </div>
+          
         </div>
       </section>
     </main>
+    <script src="main.js"></script>
   </body>
 </html>
