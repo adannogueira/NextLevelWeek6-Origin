@@ -1,4 +1,4 @@
-/* RESET */
+/*= RESET ===================================================*/
 * {
   margin: 0;
   padding: 0;
@@ -18,11 +18,12 @@ img {
   height: auto;
 }
 
-/* VARIABLES */
+/*= VARIABLES ===============================================*/
 :root {
   --header-height: 4.5rem;
-  --hue: 159;
-  /* HSL Color*/
+
+  /*= HSL Color =============================*/
+  --hue: 200;
   --base-color: hsl(var(--hue) 36% 57%);
   --base-color-second: hsl(var(--hue) 65% 88%);
   --base-color-alt: hsl(var(--hue) 57% 53%);
@@ -31,7 +32,7 @@ img {
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
 
-  /*Fonts*/
+  /*= Fonts =================================*/
   --title-font-size: 1.875rem;
   --subtitle-font-size: 1rem;
 
@@ -39,7 +40,7 @@ img {
   --body-font: 'DM Sans', sans-serif;
 }
 
-/* BASE */
+/*= BASE ====================================================*/
 html {
   scroll-behavior: smooth;
 }
@@ -92,7 +93,7 @@ body {
   );
 }
 
-/* LAYOUT */
+/*= LAYOUT ==================================================*/
 .container {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -141,7 +142,7 @@ body {
   transition: 0.3s;
 }
 
-/* NAVIGATION */
+/*= NAVIGATION ==============================================*/
 nav {
   width: 100%;
   height: var(--header-height);
@@ -217,7 +218,7 @@ nav.show ul.grid {
   gap: 4rem;
 }
 
-/* LOGO */
+/*= LOGO ====================================================*/
 .logo {
   font: 700 1.31rem var(--title-font);
   color: var(--title-color);
@@ -231,7 +232,7 @@ nav.show ul.grid {
   color: var(--body-color);
 }
 
-/* TOGGLE MENU */
+/*= TOGGLE MENU =============================================*/
 .toggle {
   color: var(--base-color);
   font-size: 1.5rem;
@@ -259,7 +260,7 @@ nav .icon-menu {
   visibility: visible;
 }
 
-/* HOME */
+/*= HOME ====================================================*/
 #home {
   overflow: hidden;
 }
@@ -304,10 +305,9 @@ nav .icon-menu {
 
 #home .text p {
   margin-bottom: 2rem;
-  /*max-width: 100%;*/
 }
 
-/* ABOUT */
+/*= ABOUT ===================================================*/
 #about {
   background: white;
 }
@@ -340,7 +340,7 @@ nav .icon-menu {
   margin-right: 1.5rem;
 }
 
-/* SERVICES */
+/*= SERVICES ================================================*/
 .cards.grid {
   gap: 1.5rem;
 }
@@ -351,6 +351,12 @@ nav .icon-menu {
   border-bottom: 0.25rem solid var(--base-color);
   border-radius: 0.25rem 0.25rem 0 0;
   text-align: center;
+  transition: background 0.5s;
+}
+
+.card:hover {
+  background-color: var(--base-color-second);
+  transition: background 0.5s;
 }
 
 .card i {
@@ -365,7 +371,7 @@ nav .icon-menu {
   margin-bottom: 0.75rem;
 }
 
-/* TESTIMONIALS */
+/*= TESTIMONIALS ============================================*/
 #testimonials {
   background: white;
 }
@@ -417,7 +423,7 @@ nav .icon-menu {
   margin-right: 0.5rem;
 }
 
-/* SWIPER */
+/*= SWIPER ==================================================*/
 .swiper-slide {
   height: auto;
   padding: 4rem 1rem;
@@ -432,7 +438,7 @@ nav .icon-menu {
   background: var(--base-color);
 }
 
-/* Contact */
+/*= Contact =================================================*/
 #contact .grid {
   gap: 4rem;
 }
@@ -460,7 +466,7 @@ nav .icon-menu {
   color: var(--base-color);
 }
 
-/* FOOTER */
+/*= FOOTER ==================================================*/
 footer {
   background: var(--base-color);
 }
@@ -494,7 +500,7 @@ footer .social a:hover {
   transform: translateY(-6px);
 }
 
-/* BACK TO TOP */
+/*= BACK TO TOP =============================================*/
 .back-to-top {
   background: var(--base-color);
   color: var(--text-color-light);
@@ -521,13 +527,12 @@ footer .social a:hover {
   transform: translateY(0);
 }
 
+/*= RESPONSIVO ==============================================*/
 
-
-
-/* RESPONSIVO */
-
-/* extra large 1200+ */
+/*= EXTRA LARGE 1200+ =======================================*/
 @media (min-width: 1200px) {
+  
+  /*= BASE ========================= */
   .container {
     max-width: 1120px;
     margin-left: auto;
@@ -550,6 +555,7 @@ footer .social a:hover {
     height: 3.125rem;
   }
 
+  /*= NAVIGATION ====================*/
   nav .menu {
     opacity: 1;
     visibility: visible;
@@ -578,7 +584,7 @@ footer .social a:hover {
     margin-top: var(--header-height);
   }
 
-  /* HOME */
+  /*= HOME ==========================*/
 
   #home .container {
     grid-auto-flow: column;
@@ -602,13 +608,13 @@ footer .social a:hover {
     margin-top: 2.75rem;
   }
 
-  /*ABOUT*/
+  /*= ABOUT =========================*/
   #about .container {
     grid-auto-flow: column;
     margin: 0 auto;
   }
 
-  /*SERVICES*/
+  /*= SERVICES ======================*/
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
 
@@ -622,13 +628,13 @@ footer .social a:hover {
     font-size: 1.5rem;
   }
 
-  /*TESTIMONIALS*/
+  /*= TESTIMONIALS ==================*/
   #testimonials .container {
     margin-left: auto;
     margin-right: auto;
   }
 
-  /*CONTACT*/
+  /*= CONTACT =======================*/
   #contact .container {
     grid-auto-flow: column;
     align-items: center;
@@ -638,7 +644,7 @@ footer .social a:hover {
     max-width: 25rem;
   }
 
-  /*FOOTER*/
+  /*= FOOTER ========================*/
   footer.section {
     padding: 3.75rem 0;
   }
@@ -654,41 +660,193 @@ footer .social a:hover {
   }
   
 }
-/* large 1023+ */
-@media (min-width: 1023px) {
 
-}
-/* large 992+ */
-@media (min-width: 992px) {
+/*= EXTRA LARGE 992+ ========================================*/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  /*= VARIABLES =====================*/
   :root {
-    --title-font-size: 2.2rem;
-    --subtitle-font-size: 1.125rem;
+    --title-font-size: 1.8rem;
+    --subtitle-font-size: 1rem;
+  }
+
+  /*= BASE ==========================*/
+  .container {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section {
+    padding: 10rem 0;
+  }
+
+  .section header,
+  #testimonials header {
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button {
+    height: 3.125rem;
+  }
+
+  /*= NAVIGATION ====================*/
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul li a.title {
+    font: 400 1rem var(--body-font);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  nav .menu ul li a.title.active {
+    font-weight: bold;
+    -webkit-font-smoothing: auto;
+  }
+  nav .icon-menu {
+    display: none;
+  } 
+
+  main {
+    margin-top: var(--header-height);
+  }
+
+  /*= HOME ==========================*/
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  #home .image {
+    order: 1;
+  }
+
+  #home .image img {
+    left: 0;
+    max-width: 100%;
+  }
+
+  #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+  }
+
+  /*= ABOUT =========================*/
+  #about .container {
+    grid-auto-flow: column;
+    margin: 0 auto;
+  }
+
+  #about .image::before {
+    content: '';
+    height: 70%;
+    width: 100%;
+    background: var(--base-color-second);
+    position: absolute;
+    top: -8.3%;
+    left: -30%;
+    z-index: 0;
+    top: 1.8rem;
+  }
+  
+  #about .image img {
+    top: 3rem;
+  }
+
+  /*= SERVICES ======================*/
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
+
+  .card {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .card .title {
+    font-size: 1.5rem;
+  }
+
+  /*= TESTIMONIALS ==================*/
+  #testimonials .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*= CONTACT =======================*/
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  #contact .text {
+    max-width: 25rem;
+  }
+
+  /*= FOOTER ========================*/
+  footer.section {
+    padding: 3.75rem 0;
+  }
+
+  footer .logo {
+    font-size: 2.25rem;
+  }
+
+  footer .container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
   }
 }
-/* medium 767+ */
-@media (min-width: 767px) {
 
+/*= MEDIUM 768+ =============================================*/
+@media (min-width: 767px) and (max-width: 991px) {
+
+  .cards {
+    display: grid;
+    grid-template-columns: [opn] 1fr [mid] 1fr [close];
+    grid-template-rows: 1fr 1fr;
+  }
 }
-
-/* small */
+/*= EXTRA SMALL 310- ========================================*/
 @media (max-width: 310px) {
+
+  /*= BASE ==========================*/
   .container {
     margin-left: 1rem;
     margin-right: 1.5rem;
   }
-  .card {
-    width: 14.5rem;
-  }
+
   .title {
     font: 700 1rem var(--title-font);
     color: var(--title-color);
     -webkit-font-smoothing: auto;
   }
+
+  /*= SERVICES ======================*/
+  .card {
+    width: 14.5rem;
+  }
+  
+  /*= TESTIMONIALS ==================*/
   #testimonials blockquote {
     padding: 2rem;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
     border-radius: 0.25rem;
     width: 14.3rem;
   }
-  
 }
