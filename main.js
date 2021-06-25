@@ -1,3 +1,21 @@
+// Funções
+function changeHeaderOnScroll() {
+  if (window.scrollY >= navHeight) {
+    header.classList.add('scroll')
+  } else {
+  header.classList.remove('scroll')
+  }
+}
+
+function toggleBackToTopButton() {
+  const button = document.querySelector('.back-to-top')
+  if(window.scrollY >= 560) {
+    button.classList.add('show')
+  } else {
+    button.classList.remove('show')
+  }
+}
+
 // Controle do menu hamburguer
 const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
@@ -21,13 +39,7 @@ for (const link of links) {
 const header = document.querySelector('#header')
 const navHeight = header.offsetHeight
 
-window.addEventListener('scroll', function() {
-  if (window.scrollY >= navHeight) {
-    header.classList.add('scroll')
-  } else {
-  header.classList.remove('scroll')
-  }
-})
+
 
 // Testimonials com carrossel
 const swiper = new Swiper('.swiper-container', {
@@ -36,7 +48,13 @@ const swiper = new Swiper('.swiper-container', {
     el: '.swiper-pagination'
   },
   mousewheel: true,
-  keyboard: true
+  keyboard: true,
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      setWrapperSize: true
+    }
+  }
 });
 
 // Scroll Reveal
@@ -57,5 +75,24 @@ scrollReveal.reveal(`
   #testimonials header,
   #testimonials .testimonials,
   #contact .text,
-  #contact .links
+  #contact .links,
+  footer .branding,
+  footer .social
 `, { interval: 100 })
+
+// Manter Menu de seção ativo
+const sections = document.querySelectorAll('main section[id]')
+function menuActivCurrentSection() {
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
+
+  
+}
+
+// Window Scroll Listener
+window.addEventListener('scroll', function() {
+  toggleBackToTopButton()
+  changeHeaderOnScroll()
+  menuActivCurrentSection()
+})
+
+
